@@ -2,6 +2,8 @@
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr))
     grid-gap: 1.5em
+    position: relative
+    z-index: 1
 
 .recipe-card
     isolation: isolate
@@ -13,6 +15,7 @@
         padding: 15px
     .custom-image
         z-index: -1
+        object-fit: cover
     .auther-img
         height: 60px
         width: 60px
@@ -37,3 +40,13 @@
         color: var(--primary-color)
         margin-top: .75em
         display: inline-block
+
+@media screen and (max-width: 768px)
+    .recipes-container
+        z-index: -1
+
+    .recipe-card
+        .custom-image
+            z-index: -1
+            
+        

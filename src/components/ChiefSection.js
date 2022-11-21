@@ -44,12 +44,6 @@ export default function ChiefSection() {
         <div className="section chiefs">
             <h1 className="title">Our Top Chiefs</h1>
             <div className="top-chiefs-container">
-                {/* <ChiefCard />
-                <ChiefCard />
-                <ChiefCard />
-                <ChiefCard />
-                <ChiefCard />
-                <ChiefCard /> */}
                 { chiefs.map(chief => <ChiefCard key={chief.name} chief={chief} />) }
             </div>
         </div>
