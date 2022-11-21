@@ -3,15 +3,19 @@
     align-items: center
     .typography
         padding-right: 1em
+    .col.gallery
+        overflow: hidden
     .gallery
         display: grid
         grid-template-columns: repeat(3, 1fr)
         gap: 1.5vw
         .custom-image
             border-radius: 5px
-            overflow: hidden
             transform: scale(0)
             animation: .6s popOut forwards
+            img
+                object-fit: cover
+                object-position: center
             &:nth-child(2)
                 animation-delay: .1s
             &:nth-child(3)
